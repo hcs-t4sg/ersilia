@@ -1,3 +1,5 @@
+import datetime
+import os
 from . import ersilia_cli
 from .. import echo
 from ... import ErsiliaModel
@@ -17,3 +19,5 @@ def close_cmd():
         mdl = ErsiliaModel(model_id, service_class=service_class)
         mdl.close()
         echo(":no_entry: Model {0} closed".format(mdl.model_id), fg="green")
+
+      
