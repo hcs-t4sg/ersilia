@@ -119,9 +119,12 @@ class RunTracker:
         """
         return df.sample(num_rows, axis=0).sample(num_cols, axis=1)
 
-# Stats function: calculates the basic statistics of the output file from a model. This includes the
-# mode (if applicable), minimum, maximum, and standard deviation. 
+# Stats function: 
     def stats(self, result):
+        """
+        This function calculates the basic statistics of the .csv output file from a model. This includes the mode (if applicable), 
+        minimum, maximum, and standard deviation. 
+        """
         dat = read_csv(result)
 
         # drop first two columns (key, input)
